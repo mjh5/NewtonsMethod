@@ -24,8 +24,7 @@ public class NewtonsMethod {
 	 */
 	public NewtonsMethod(int v, int p) {
 		value = v;
-		power = p;
-		
+		power = p;		
 	}
 	
 	/**
@@ -37,13 +36,25 @@ public class NewtonsMethod {
 		value = 0;
 	}
 	
-	function(int value, int power){
-		
+	private double function(double x){
+		return Math.pow(x, power) - value;
 	}
 	
-	functionDerivative(int value, int power) {
-		
+	private double functionDerivative(double x) {
+		return power * Math.pow(x, power - 1);
 	}
 	
+	public static double newton(double x, int i) {
+		if (i == 0) {
+			return x;
+		}
+		double newX = x - (function(x)/functionDerivative(x));
+		i--;
+		System.out.println("Iteration number " + i + ": " + newX);
+		newton(newX, i);
+	}
+	public static void main(String[] args) {
+		System.out.println("Welcome to our Newtons Method Project!\nThis program estimates the nth root of a number using Newton's Method.");
+	}
 
 }
