@@ -19,13 +19,23 @@ public class NewtonsMethod {
 	 */
 	int value;
 	
+	
+	public NewtonsMethod(int v, int p) {
+		value = v;
+		power = p;
+		
+	}
+	
+	
 	/**
 	 * Default constructor.
 	 */
+	
 	public NewtonsMethod() {
 		power = 0;
 		value = 0;
 	}
+	
 	
 	
 
