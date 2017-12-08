@@ -19,13 +19,14 @@ public class NewtonsMethod {
 	 */
 	int value;
 	
-	
+	/**
+	 * Constructor 
+	 */
 	public NewtonsMethod(int v, int p) {
 		value = v;
 		power = p;
 		
 	}
-	
 	
 	/**
 	 * Default constructor.
@@ -36,7 +37,13 @@ public class NewtonsMethod {
 		value = 0;
 	}
 	
+	function(int value, int power){
+		
+	}
 	
+	functionDerivative(int value, int power) {
+		
+	}
 	
 
 }
